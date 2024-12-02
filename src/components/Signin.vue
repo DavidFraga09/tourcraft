@@ -1,12 +1,22 @@
 <template>
     <div class="container">
     <div class="left-section">
-      <img src="@/assets/monument.jpg" class="responsive-image" alt="Explore Riviera Maya" />
+      <div class="image-container">
+        <img src="@/assets/monument.jpg" class="responsive-image" alt="Explore Riviera Maya" />
+      </div>      
       <div class="text-content">
-        <h1>Explore Riviera Maya</h1>
-        <p>Welcome to TourCraft</p>
-        <p>Riviera Maya at your own pace: discover, book and live your adventure.</p>
-      </div>
+  <h1 class="boldest" >Explore Riviera Maya</h1>
+  <p>
+    <span class="bolder">Welcome</span> 
+    <span class="bolder">to</span> 
+    <span class="bolder">TourCraft</span>
+  </p>
+  <div class="text-conten">
+    <p class="bold" style="font-size: 1.0rem;">Riviera Maya at your own pace: discover, book 
+      <span class="line-break">and live your adventure.</span>
+    </p>
+  </div>
+</div>
     </div>
     <div class="right-section">
       <form @submit.prevent="handleSubmit" class="registration-form">
@@ -151,22 +161,29 @@
     align-items: center;
     color: white;
     text-align: center;
-    padding: 400px 20px 20px 20px;
+    padding: 400px 40px 30px 30px;
     height: 100%; 
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.9); 
+    overflow: hidden;
   }
   
-  .left-section img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    z-index: -1; 
-    opacity: 0.6; 
-  }
+  
+.image-container {
+  position: absolute; /* La imagen se coloca en posición absoluta */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Detrás del contenido */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6; /* Transparencia de la imagen */
+}
   
   .text-content {
     position: relative; 
@@ -176,10 +193,51 @@
     line-height: 1.4; 
     margin: 0; 
   }
-  
-  .left-section h1, .left-section p {
-    margin: 10px; 
+
+  .text-content h1 {
+  font-size: 2rem; /* Tamaño grande para el título */
+  font-weight: 900; /* Asegúrate de que sea negrita */
+  margin-bottom: 20px; /* Espaciado entre el título y el párrafo */
+}
+
+.text-content p {
+  font-size: 1.2rem; /* Aumenta el tamaño del texto de los párrafos */
+  font-weight: 500; /* Ajusta el peso del texto */
+  margin-bottom: 20px; /* Aumenta el espaciado entre párrafos */
+  position: relative; 
+    top: 50px; 
+    z-index: 1; 
+    text-align: center;
+    line-height: 1.4; 
+    margin: 0; 
+}
+
+.text-conten {
+    position: relative; 
+    top: 20px; 
+    z-index: 1; 
+    text-align: center;
+    line-height: 1.4; 
+    margin: 0; 
+    font-size: 0.4rem;
   }
+
+  .line-break {
+  display: block;
+}
+  
+  .boldest {
+  font-weight: 900; /* Muy negrita */
+}
+
+.bolder {
+  font-weight: 600; /* Negrita media */
+}
+
+.bold {
+  font-weight: 200; /* Reduce el grosor de la negrita */
+}
+
   
   .right-section {
     flex: 3; 
@@ -220,12 +278,12 @@
   
   .form-options {
     position: absolute;
-    bottom: 30px; 
+    bottom: 120px; 
   }
   
   .terms-container label {
     position: absolute;
-    bottom: 10px; 
+    bottom: 100px; 
   }
   
   .form-options label {
@@ -316,8 +374,8 @@
   .donhave {
     position: absolute;
     justify-content: center;
-    right: 310px;
-    bottom: -150px;
+    right: 360px;
+    bottom: -90px;
   }
   
   .forgot-password-container {
