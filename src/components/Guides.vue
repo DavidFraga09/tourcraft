@@ -255,9 +255,9 @@
             <div class="heading">Ours Guides in</div>
             <div class="div-4">
               <div class="select">
-                <div class="icon-wrapper"><img class="icon-3" src="" /></div>
+                <div class="icon-wrapper"><img class="icon-3" src="/location.svg" /></div>
                 <div class="option">Merida</div>
-                <div class="arrow"><img class="icon-4" src="/location.svg" /></div>
+                <div class="arrow"><img class="icon-4" src="" /></div>
               </div>
             </div>
           </div>
@@ -270,21 +270,19 @@
             <div class="scroll-area">
               <div class="checkboxes">
                 <div class="checkbox-2">
-                  <div class="checkbox"><img class="subtract" src="/" /></div>
-                <input type="checkbox" v-model="selectedLanguages" value="English" />
-                  <div class="text-wrapper-24">English</div>
+                  <input type="checkbox" id="english" class="checkbox" />
+                  <label for="english" class="text-wrapper-24">English</label>
                 </div>
-                <div class="checkbox-2"><img class="subtract" src="/" /></div>
-                <input type="checkbox" v-model="selectedLanguages" value="Spanish" />
+                <div class="checkbox-2">
+                  <img class="checkbox" src="" />
                   <div class="text-wrapper-25">Spanish</div>
                 </div>
-                <div class="checkbox-3"><img class="subtract" src="" /></div>
-                    <input type="checkbox" v-model="selectedLanguages" value="Chinese" />
+                <div class="checkbox-3">
+                  <img class="checkbox" src="" />
                   <div class="text-wrapper-25">Chinese</div>
                 </div>
                 <div class="checkbox-3">
                   <div class="checkbox"><img class="subtract" src="" /></div>
-                  <input type="checkbox" v-model="selectedLanguages" value="Korean" />
                   <div class="text-wrapper-24">Korean</div>
                 </div>
                 <div class="checkbox-2">
@@ -395,6 +393,8 @@
         </div>
         <img class="rectangle-2" src="" />
         <img class="rectangle-3" src="" />
+      </div>
+    </div>
 </template>
 
 <script>
