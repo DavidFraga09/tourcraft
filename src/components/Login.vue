@@ -159,24 +159,28 @@ export default {
 /* General - Pantallas pequeñas (teléfonos móviles) */
 @media (max-width: 768px) {
   .login {
-    flex-direction: column; /* Cambia la dirección a columna */
+    flex-direction: column; /* Cambiar a disposición en columna */
     align-items: center;
-    padding: 20px; /* Espaciado interno */
+    padding: 0; /* Ajustar espaciado */
   }
 
   .login .div {
     width: 100%; /* Ocupa todo el ancho */
-    height: auto; /* Ajusta la altura automáticamente */
+    height: auto; /* Ajusta altura automáticamente */
   }
 
   .login .left {
-    width: 100%; /* La imagen ocupa el ancho total */
-    height: 300px; /* Altura ajustada */
+    width: 100%; /* Imagen ocupa todo el ancho */
+    height: auto; /* Ajusta la altura automáticamente */
   }
 
   .login .overlap-group {
     width: 100%;
-    height: 100%;
+    height: 300px; /* Ajusta altura para pantallas pequeñas */
+  }
+
+  .login .overlap-group::after {
+    height: 300px; /* Mantén la capa negra semitransparente sincronizada */
   }
 
   .login .explore-riviera-maya {
@@ -184,38 +188,37 @@ export default {
     top: 20px;
     left: 10px;
     text-align: center; /* Centrar texto */
+    width: 100%; /* Ajustar ancho */
   }
 
-  .login .text-wrapper-2 {
-    font-size: 16px;
-    width: 80%; /* Texto ajustado al tamaño */
-    margin: auto;
-  }
-
-  .login .p {
+  .login .text-wrapper-2, .login .p {
     font-size: 14px;
-    top: auto; /* Ajusta automáticamente */
-    left: auto;
-    margin-top: 10px;
+    width: 90%;
+    margin: auto;
     text-align: center; /* Centra el texto */
   }
 
+  /* Parte derecha debajo de la imagen */
   .login .overlap {
-    display: none; /* Ocultar en pantallas pequeñas */
-  }
-
-  .login .group {
-    width: 100%; /* Ancho completo */
+    width: 100%;
+    height: auto;
+    margin-top: 20px; /* Espaciado entre la imagen y la sección de formulario */
     padding: 20px; /* Espaciado interno */
   }
 
+  .login .group {
+    width: 100%;
+    padding: 20px;
+  }
+
   .login .input, .login .input-2 {
-    width: 100%; /* Ajusta los formularios */
+    width: 100%; /* Formularios ocupan todo el ancho */
   }
 
   .login .button-primary {
     width: 100%;
     padding: 15px;
+    text-align: center;
   }
 
   .login .frame-wrapper, .login .button-with-centered {
@@ -231,18 +234,13 @@ export default {
     left: 0;
   }
 
-  .login .text-wrapper-2 {
-    font-size: 14px;
-    width: 90%;
-  }
-
-  .login .p {
+  .login .text-wrapper-2, .login .p {
     font-size: 12px;
     line-height: 18px;
   }
 
   .login .input-field, .login .input-field-2 {
-    padding: 14px;
+    padding: 12px;
     font-size: 14px;
   }
 
