@@ -20,8 +20,12 @@
     </div>
     <div class="right-section">
       <form @submit.prevent="handleSubmit" class="registration-form">
-        <h2>Create account</h2>
-        <p>Join with us!</p>
+        <div class="h2">
+          <h2>Create account</h2>
+        </div>
+        <div class="p">
+          <p>Join with us!</p>
+        </div>
         <div class="form-group">
           <input v-model="form.firstName" type="text" name="first-name" placeholder="First name" required />
           <input v-model="form.lastName" type="text" name="last-name" placeholder="Last name" required />
@@ -253,6 +257,15 @@ const signInWithGoogle = async () => {
     height: 100%; 
     overflow-y: auto;
   }
+
+  .h2{
+    margin:0;
+
+  }
+
+  .p  {
+    margin: 10px;
+}
   
   .registration-form {
     width: 100%;
