@@ -229,25 +229,44 @@
                     </div>
                 </div>
                 <div class="banners">
-                    <div class="element">
-                        <img class="solano" src="@/assets/solano 3.png" />
-                        <div class="text-wrapper-12">Meet our guides</div>
-                        <button class="button"><div class="text-wrapper-13">View Details</div></button>
-                    </div>
-                    <div class="element-2">
-                        <img class="solano" src="@/assets/solano 3.png" />
-                        <div class="frame-5">
-                            <div class="text-wrapper-14">About us?</div>
-                            <button class="button"><div class="text-wrapper-13">View Details</div></button>
-                        </div>
-                    </div>
+            <div class="element">
+                <img class="solano" src="@/assets/solano 3.png" />
+                <div class="text-wrapper-12">Meet our guides</div>
+                <button class="button" @click="viewDetails('meetOurGuides')">
+                    <div class="text-wrapper-13">View Details</div>
+                </button>
+            </div>
+            <div class="element-2">
+                <img class="solano" src="@/assets/solano 3.png" />
+                <div class="frame-5">
+                    <div class="text-wrapper-14">About us?</div>
+                    <button class="button" @click="viewDetails('aboutUs')">
+                        <div class="text-wrapper-13">View Details</div>
+                    </button>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 </template>
-  
-<script >
 
+<script>
+export default {
+    methods: {
+        viewDetails(section) {
+            // Puedes usar un "alert" o cualquier lógica personalizada aquí
+            if (section === 'meetOurGuides') {
+                console.log('Viewing details for Meet our guides');
+                // Puedes redirigir a una página diferente si lo deseas
+                 this.$router.push('/Guides');
+            } else if (section === 'aboutUs') {
+                console.log('Viewing details for About Us');
+                // Puedes redirigir a una página diferente si lo deseas
+                this.$router.push('/About');
+            }
+        }
+    }
+}
 </script>
 
   
@@ -799,8 +818,7 @@
 .tours .text-wrapper-14 {
     position: relative;
     width: 386px;
-    height: 76px;
-    margin-top: -1.00px;
+    height: 70px;
     font-family: "Golos Text-Bold", Helvetica;
     font-weight: 700;
     color: #ffffff;
@@ -811,7 +829,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    line-clamp: 2;
+    line-clamp: 1;
     -webkit-box-orient: vertical;
 }
   </style>

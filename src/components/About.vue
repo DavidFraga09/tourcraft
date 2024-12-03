@@ -53,20 +53,22 @@
           </div>
         </div>
         <div class="overlap-group">
-          <div class="banner">
-            <div class="banner-2">
-              <div class="img">
-                <div class="frame"><div class="text-wrapper-5">from $1200</div></div>
-              </div>
-              <div class="text-button">
-                <div class="text-wrapper-6">Wait...</div>
-                <div class="text-button-2">
-                  <p class="text-wrapper-7">interested in getting to know us better?</p>
-                  <button class="button"><div class="text-wrapper-8">Contact Us</div></button>
+                <div class="banner">
+                    <div class="banner-2">
+                        <div class="img">
+                            <div class="frame"><div class="text-wrapper-5">from $1200</div></div>
+                        </div>
+                        <div class="text-button">
+                            <div class="text-wrapper-6">Wait...</div>
+                            <div class="text-button-2">
+                                <p class="text-wrapper-7">Interested in getting to know us better?</p>
+                                <button class="button" @click="viewDetails('Contact')">
+                                  <div class="text-wrapper-8">Contact Us</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
           <div class="meet-our-team">
             <div class="text-wrapper-9">Meet Our Team</div>
             <div class="cards">
@@ -193,6 +195,22 @@
       </div>
     </div>
 </template>
+
+<script>
+  export default {
+    methods: {
+        viewDetails(section) {
+            // Puedes usar un "alert" o cualquier lógica personalizada aquí
+            if (section === 'Contact') {
+                console.log('Contact');
+                // Puedes redirigir a una página diferente si lo deseas
+                 this.$router.push('/Contact');
+            }
+          }
+        }
+      }
+</script>
+
 
 <style scoped>
 .about-us {
