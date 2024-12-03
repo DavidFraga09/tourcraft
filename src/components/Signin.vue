@@ -54,7 +54,7 @@
           </div>
         </div>
         <div class="donhave">
-          <p>Already have an account? <a href="#">Log In</a></p>
+          <p>Already have an account? <a href="#">Sing In</a></p>
         </div>
         <div class="terms-container">
           <label>
