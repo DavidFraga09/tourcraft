@@ -76,7 +76,7 @@
           <!-- Registro -->
           <p class="don-t-have-an">
             <span class="text-wrapper-8">Don’t have an account? </span>
-            <a href="#" class="text-wrapper-9" @click.prevent="signUp">Sign up</a>
+            <a href="#" class="text-wrapper-9" @click.prevent="Signin">Sign up</a>
           </p>
         </div>
         <img class="solano" src="@/assets/logo.png" alt="Logo" />
@@ -114,9 +114,8 @@ export default {
       alert('Redirecting to Forgot Password page...');
       this.$router.push('/forgot-password');
     },
-    signUp() {
-      alert('Redirecting to Sign-Up page...');
-      this.$router.push('/sign-up');
+    Signin() {
+      this.$router.push('/Sign-in');
     },
     loginWithGoogle() {
       const auth = getAuth();
