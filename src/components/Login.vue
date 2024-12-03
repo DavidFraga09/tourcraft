@@ -156,6 +156,102 @@ export default {
 
 
 <style scoped>
+/* General - Pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 768px) {
+  .login {
+    flex-direction: column; /* Cambia la dirección a columna */
+    align-items: center;
+    padding: 20px; /* Espaciado interno */
+  }
+
+  .login .div {
+    width: 100%; /* Ocupa todo el ancho */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  .login .left {
+    width: 100%; /* La imagen ocupa el ancho total */
+    height: 300px; /* Altura ajustada */
+  }
+
+  .login .overlap-group {
+    width: 100%;
+    height: 100%;
+  }
+
+  .login .explore-riviera-maya {
+    font-size: 24px; /* Texto más pequeño */
+    top: 20px;
+    left: 10px;
+    text-align: center; /* Centrar texto */
+  }
+
+  .login .text-wrapper-2 {
+    font-size: 16px;
+    width: 80%; /* Texto ajustado al tamaño */
+    margin: auto;
+  }
+
+  .login .p {
+    font-size: 14px;
+    top: auto; /* Ajusta automáticamente */
+    left: auto;
+    margin-top: 10px;
+    text-align: center; /* Centra el texto */
+  }
+
+  .login .overlap {
+    display: none; /* Ocultar en pantallas pequeñas */
+  }
+
+  .login .group {
+    width: 100%; /* Ancho completo */
+    padding: 20px; /* Espaciado interno */
+  }
+
+  .login .input, .login .input-2 {
+    width: 100%; /* Ajusta los formularios */
+  }
+
+  .login .button-primary {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .login .frame-wrapper, .login .button-with-centered {
+    width: 100%;
+  }
+}
+
+/* Más pequeño (teléfonos muy pequeños) */
+@media (max-width: 480px) {
+  .login .explore-riviera-maya {
+    font-size: 18px;
+    top: 10px;
+    left: 0;
+  }
+
+  .login .text-wrapper-2 {
+    font-size: 14px;
+    width: 90%;
+  }
+
+  .login .p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .login .input-field, .login .input-field-2 {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .login .button-primary {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://fonts.googleapis.com/css?family=Commissioner:400,var(--paragraph-p3-semi-bold-font-weight),italic|Golos+Text:400,500,700,600|Inter:500,400,900,600");
 
