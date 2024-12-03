@@ -5,6 +5,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Contact from '@/components/Contact.vue';
 import Login from '@/components/Login.vue';
 import Home from '@/components/Home.vue';
+import Tours from '@/components/Tours.vue';
 import Guides from '@/components/Guides.vue';
 
 const router = createRouter({
@@ -16,6 +17,7 @@ const router = createRouter({
         { path: "/contact", component: Contact, meta: { requiresAuth: false } },
         { path: "/home", component: Home, meta: { requiresAuth: false } },
         { path: "/guides", component: Guides, meta: { requiresAuth: false } },
+        { path: "/tours", component: Tours, meta: { requiresAuth: false } },
         {path: '/login',
             name: 'Login',
             component: Login},
