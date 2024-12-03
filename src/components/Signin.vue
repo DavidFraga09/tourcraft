@@ -7,8 +7,7 @@
       <div class="text-content">
   <h1 class="boldest" >Explore Riviera Maya</h1>
   <p>
-    <span class="bolder">Welcome</span> 
-    <span class="bolder">to</span> 
+    <span class="bolder">Welcome to</span> 
     <span class="bolder">TourCraft</span>
   </p>
   <div class="text-conten">
@@ -133,7 +132,7 @@
   
   body {
     padding-bottom: 50px;
-    font-family: Arial, sans-serif;
+    font-family: "poppins-bold", Helvetica;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,7 +152,7 @@
   
   .left-section {
     flex: 2;
-    font-family: Arial, sans-serif;
+    font-family: "poppins-bold", Helvetica;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -195,8 +194,8 @@
   }
 
   .text-content h1 {
-  font-size: 2rem; /* Tamaño grande para el título */
-  font-weight: 900; /* Asegúrate de que sea negrita */
+  font-size: 2.2rem; /* Tamaño grande para el título */
+  font-weight: 700; /* Asegúrate de que sea negrita */
   margin-bottom: 20px; /* Espaciado entre el título y el párrafo */
 }
 
@@ -243,6 +242,7 @@
     flex: 3; 
     padding: 50px 40px; 
     display: flex;
+    font-family: "poppins-bold", Helvetica;
     flex-direction: column;
     justify-content: center; 
     align-items: center; 
