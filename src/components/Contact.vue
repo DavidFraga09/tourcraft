@@ -84,17 +84,19 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
+    width: 10%;
+    margin-top: -200px;
+    margin-bottom: -400px;
   }
   
-  .contact-us .div {
+ .div {
     background-color: #ffffff;
     width: 1600px;
     height: 2868px;
     position: relative;
   }
   
-  .contact-us .form {
+.form {
     display: inline-flex;
     align-items: flex-start;
     gap: 48px;
@@ -104,7 +106,7 @@
     left: 80px;
   }
   
-  .contact-us .banner {
+.banner {
     position: relative;
     width: 368px;
     height: 602px;
@@ -117,7 +119,7 @@
   }
 
 
-  .contact-us .img {
+.img {
     position: absolute;
     width: 245px;
     height: 223px;
@@ -125,7 +127,7 @@
     left: 46px;
   }
   
-  .contact-us .frame {
+.frame {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -135,7 +137,7 @@
     left: 49px;
   }
   
-  .contact-us .text {
+.text {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -144,7 +146,7 @@
     flex: 0 0 auto;
   }
   
-  .contact-us .do-you-have-any {
+.do-you-have-any {
     position: relative;
     width: 269px;
     height: 40px;
@@ -163,7 +165,7 @@
     -webkit-box-orient: vertical;
   }
   
-  .contact-us .text-wrapper {
+  .text-wrapper {
     position: relative;
     width: fit-content;
     font-family: "Golos Text", Helvetica;
@@ -181,7 +183,7 @@
     -webkit-box-orient: vertical;
   }
   
-  .contact-us .form-2 {
+ .form-2 {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
@@ -190,7 +192,7 @@
     flex: 0 0 auto;
   }
   
-  .contact-us .div-2 {
+ .div-2 {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
@@ -199,7 +201,7 @@
     flex: 0 0 auto;
   }
   
-  .contact-us .p {
+.p {
     position: relative;
     width: fit-content;
     margin-top: -1.00px;
@@ -212,7 +214,7 @@
     white-space: nowrap;
   }
   
-  .contact-us .text-wrapper-2 {
+.text-wrapper-2 {
     position: relative;
     width: 649px;
     height: 34px;
@@ -230,7 +232,7 @@
     -webkit-box-orient: vertical;
   }
   
-  .contact-us .inputs {
+.inputs {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
@@ -239,7 +241,7 @@
     flex: 0 0 auto;
   }
   
-  .contact-us .text-input {
+.text-input {
     display: inline-flex;
     align-items: flex-start;
     gap: 48px;
@@ -247,7 +249,7 @@
     flex: 0 0 auto;
   }
   
-  .contact-us .text-input-2 {
+.text-input-2 {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
@@ -256,7 +258,7 @@
     flex: 0 0 auto;
   }
   
-  .contact-us .input {
+.input {
     position: relative;
     width: fit-content;
     margin-top: -1.00px;
@@ -271,7 +273,7 @@
     padding: 0;
   }
   
-  .contact-us .input-2 {
+.input-2 {
     position: relative;
     width: 368px;
     height: 50px;
@@ -280,7 +282,7 @@
     opacity: 0.6;
   }
   
-  .contact-us .text-wrapper-3 {
+.text-wrapper-3 {
     position: relative;
     width: fit-content;
     margin-top: -1.00px;
@@ -292,7 +294,7 @@
     line-height: normal;
   }
   
-  .contact-us .text-input-3 {
+  .text-input-3 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -303,7 +305,7 @@
     flex: 0 0 auto;
   }
   
-  .contact-us .input-3 {
+.input-3 {
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -313,7 +315,7 @@
     opacity: 0.6;
   }
   
-  .contact-us .div-wrapper {
+.div-wrapper {
     display: flex;
     width: 784px;
     height: 60px;
@@ -326,7 +328,7 @@
     border-radius: 12px;
   }
   
-  .contact-us .text-wrapper-4 {
+.text-wrapper-4 {
     position: relative;
     width: fit-content;
     font-family: "Golos Text", Helvetica;
@@ -338,22 +340,22 @@
     white-space: nowrap;
   }
   
-  .contact-us .image {
+.image {
     position: absolute;
     width: 1452px;
     height: 300px;
     top: 1770px;
     left: 74px;
   }
-  .contact-us .image2 {
+.image2 {
     position: absolute;
     width: 1452px;
     height: 150px;
-    top: 2390px;
+    top: 2200px;
     left: 74px;
   }
   
-  .contact-us .hero {
+.hero {
     display: flex;
     width: 1200px;
     height: 320px;
@@ -371,7 +373,7 @@
     background-position: 50% 50%;
   }
   
-  .contact-us .text-wrapper-5 {
+.text-wrapper-5 {
     position: relative;
     width: fit-content;
     font-family: "Golos Text", Helvetica;
@@ -383,7 +385,7 @@
     white-space: nowrap;
   }
   
-  .contact-us .group {
+.group {
     position: absolute;
     width: 1132px;
     height: 163px;
@@ -391,7 +393,7 @@
     left: 262px;
   }
   
-  .contact-us .address {
+.address {
     position: absolute;
     width: 467px;
     height: 144px;
@@ -399,7 +401,7 @@
     left: 289px;
   }
   
-  .contact-us .icon {
+.icon {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -407,7 +409,7 @@
     left: 214px;
   }
   
-  .contact-us .text-wrapper-15 {
+.text-wrapper-15 {
     position: absolute;
     height: 34px;
     top: 55px;
@@ -421,7 +423,7 @@
     line-height: normal;
   }
   
-  .contact-us .avenida-paseo-del {
+ .avenida-paseo-del {
     position: absolute;
     height: 38px;
     top: 105px;
@@ -434,7 +436,7 @@
     line-height: normal;
   }
   
-  .contact-us .email {
+.email {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -445,7 +447,7 @@
     transform: rotate(-0.16deg);
   }
   
-  .contact-us .icon-2 {
+.icon-2 {
     position: relative;
     width: 40.11px;
     height: 40.11px;
@@ -453,7 +455,7 @@
     transform: rotate(0.16deg);
   }
   
-  .contact-us .text-wrapper-16 {
+ .text-wrapper-16 {
     position: relative;
     width: fit-content;
     font-family: "Golos Text", Helvetica;
@@ -465,7 +467,7 @@
     line-height: normal;
   }
   
-  .contact-us .text-wrapper-17 {
+ .text-wrapper-17 {
     position: relative;
     width: fit-content;
     font-family: "Golos Text", Helvetica;
@@ -477,7 +479,7 @@
     white-space: nowrap;
   }
   
-  .contact-us .phone {
+ .phone {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
