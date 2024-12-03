@@ -1,13 +1,4 @@
 <template>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    
-  </head>
-  <body>
     <div class="about-us">
       <div class="div">
         <div class="dare-to-explore-with">
@@ -201,8 +192,6 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
 </template>
 
 <style scoped>
@@ -211,14 +200,17 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
+    width: 10%;
+    margin-top: -200px;
+    margin-bottom: -900px;  
   }
   
   .about-us .div {
     background-color: #ffffff;
     width: 1600px;
-    height: 4333px;
+    height: 4400px;
     position: relative;
+    
     
   }
   
