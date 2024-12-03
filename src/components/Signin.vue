@@ -54,7 +54,7 @@
           </div>
         </div>
         <div class="donhave">
-          <p>Don't have an account? <a href="#">Log In</a></p>
+          <p>Already have an account? <a href="#">Log In</a></p>
         </div>
         <div class="terms-container">
           <label>
@@ -378,7 +378,7 @@ const signInWithGoogle = async () => {
   .donhave {
     position: absolute;
     justify-content: center;
-    right: 360px;
+    right: 330px;
     bottom: -90px;
   }
   

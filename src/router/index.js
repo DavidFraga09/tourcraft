@@ -18,6 +18,9 @@ const router = createRouter({
         { path: "/contact", component: Contact, meta: { requiresAuth: false } },
         { path: "/home", component: Home, meta: { requiresAuth: false } },
         { path: "/guides", component: Guides, meta: { requiresAuth: false } },
+        { path: "/tours", component: Tours, meta: { requiresAuth: false } },
+        { path: "/about", component: About, meta: { requiresAuth: false } },
+
         {path: '/login',
             name: 'Login',
             component: Login},
