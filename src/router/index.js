@@ -6,6 +6,7 @@ import Contact from '@/components/Contact.vue';
 import Login from '@/components/Login.vue';
 import Home from '@/components/Home.vue';
 import Guides from '@/components/Guides.vue';
+import About from '@/components/About.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -16,6 +17,7 @@ const router = createRouter({
         { path: "/contact", component: Contact, meta: { requiresAuth: false } },
         { path: "/home", component: Home, meta: { requiresAuth: false } },
         { path: "/guides", component: Guides, meta: { requiresAuth: false } },
+        {path: '/about',component: About, meta: { requiresAuth: false }},
         {path: '/login',
             name: 'Login',
             component: Login},
