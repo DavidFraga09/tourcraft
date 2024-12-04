@@ -304,8 +304,8 @@ export default {
 
 .tours .text-wrapper {
     position: absolute;
-    top: 123px;
-    left: 520px;
+    top: 0px;
+    left: 0px;
     font-family: "Golos Text-Bold", Helvetica;
     font-weight: 700;
     color: #ffffff;
@@ -356,9 +356,8 @@ export default {
     gap: 10px;
     padding: 8px 16px;
     position: relative;
-    top: 32px;
+    top: 20px;
     left: 419px;
-    background-color: #000000;
     border-radius: 8px;
 }
 
@@ -831,5 +830,14 @@ export default {
     display: -webkit-box;
     line-clamp: 1;
     -webkit-box-orient: vertical;
+}
+
+@media (max-width: 768px) {
+  .tours{
+    transform:scale(0.3);
+    margin-left: -10%;
+    margin-bottom: -300%;
+    margin-top: -320%;
+    }
 }
   </style>
