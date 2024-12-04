@@ -130,6 +130,7 @@ const signInWithGoogle = async () => {
   
   
   <style scoped>
+
   :root {
       --white: rgba(255, 255, 255, 1);
       --blue: rgba(0, 122, 255, 1);
@@ -410,5 +411,4 @@ const signInWithGoogle = async () => {
   .forgot-password:hover {
     text-decoration: underline;
   }
-
   </style>
