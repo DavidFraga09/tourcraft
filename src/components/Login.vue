@@ -156,6 +156,54 @@ export default {
 
 
 <style scoped>
+@media (max-width: 768px) {
+  .login {
+    flex-direction:column;
+    margin-top: -120px;
+    margin-bottom: -20px;
+  }
+
+  .login .left {
+    display: none;
+  }
+
+  .login .overlap-group {
+    width: 100%;
+    height: auto;
+  }
+
+  .login .overlap {
+    margin-left: -240%;
+    transform: scale(0.6);
+  }
+
+  .login .group {
+    width: 100%;
+  }
+
+  .login .explore-riviera-maya {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .login .text-wrapper-2 {
+    font-size: 20px;
+  }
+
+  .login .p {
+    font-size: 14px;
+  }
+
+  .login .frame-wrapper {
+    width: 100%;
+  }
+
+  .login .button-primary,
+  .login .button-with-centered {
+    width: 100%;
+  }
+}
+
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://fonts.googleapis.com/css?family=Commissioner:400,var(--paragraph-p3-semi-bold-font-weight),italic|Golos+Text:400,500,700,600|Inter:500,400,900,600");
 
@@ -646,8 +694,8 @@ a {
   position: absolute;
   width: 193px;
   height: 70px;
-  top: -30px;
-  left: 460px;
+  top: -20px;
+  left: 360px;
   object-fit: cover;
   z-index: 20;
 }
