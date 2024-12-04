@@ -283,7 +283,7 @@ const signInWithGoogle = async () => {
   .form-group {
     display: flex;
     gap: 150px;
-    margin-bottom: 20px; 
+    margin-bottom: 5px; 
   }
   
   .form-group input {
@@ -301,7 +301,7 @@ const signInWithGoogle = async () => {
   
   .terms-container label {
     position: absolute;
-    bottom: 100px; 
+    bottom: 95px; 
   }
   
   .form-options label {
@@ -398,7 +398,7 @@ const signInWithGoogle = async () => {
   
   .forgot-password-container {
     position: absolute;
-    bottom: 3px; 
+    bottom: 0px; 
     right: -500px;  
   }
   

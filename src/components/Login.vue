@@ -369,6 +369,7 @@ a {
   position: absolute;
   top: 64px;
   left: 0;
+  border-color:#ffffff;
 }
 
 .login .title {

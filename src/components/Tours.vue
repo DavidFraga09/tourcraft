@@ -276,24 +276,30 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 10%;
-    margin-top: -200px;
-    margin-bottom: -400px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: -1;
 
 }
 
 .tours .div {
     background-color: #ffffff;
     width: 1600px;
-    height: 3530px;
+    height: 3000px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    left: -50px;
 }
+
+
 
 .tours .hero {
     position: absolute;
     width: 1200px;
     height: 320px;
-    top: 272px;
+    top: 50px;
     left: 200px;
     background-color: #0000001a;
     border-radius: 20px;
