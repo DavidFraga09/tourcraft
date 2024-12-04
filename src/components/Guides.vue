@@ -115,7 +115,6 @@
               <div class="checkbox-3">
                 <input type="checkbox" id="english" class="checkbox" />
                   <label for="english" class="text-wrapper-24">Eco-friendly</label>
-                <div class="text-wrapper-24">Eco-friendly</div>
               </div>
               <div class="checkbox-3">
                 <input type="checkbox" id="english" class="checkbox" />
@@ -234,9 +233,9 @@
         </div>
         <div class="rectangle"></div>
       </div>
-      <div class="button">
-        <div class="text-wrapper-7">Choose place to go with me!</div>
-      </div>
+      <a class="button" href="/another-page" style="text-decoration: none;">
+            <div class="text-wrapper-7">Choose place to go with me!</div>
+        </a>
     </div>
     <div class="image-container">
       <img class="img-2" alt="Img" src="@/assets/mamo.png" />
@@ -289,9 +288,9 @@
           <div class="text-wrapper-6">(300 reviews)</div>
         </div>
         <div class="rectangle"></div>
-        <div class="button">
-          <div class="text-wrapper-7">Choose place to go with me!</div>
-        </div>
+        <a class="button" href="/another-page" style="text-decoration: none;">
+            <div class="text-wrapper-7">Choose place to go with me!</div>
+        </a>
       </div>
     </div>
   </div>
@@ -344,9 +343,9 @@
         </div>
         <div class="rectangle"></div>
       </div>
-      <div class="button">
-        <div class="text-wrapper-7">Choose place to go with me!</div>
-      </div>
+      <a class="button" href="/another-page" style="text-decoration: none;">
+            <div class="text-wrapper-7">Choose place to go with me!</div>
+        </a>
     </div>
     <div class="image-container">
       <img class="img-2" alt="Img" src="@/assets/mamo.png" />
@@ -399,9 +398,9 @@
           <div class="text-wrapper-6">(300 reviews)</div>
         </div>
         <div class="rectangle"></div>
-        <div class="button">
-          <div class="text-wrapper-7">Choose place to go with me!</div>
-        </div>
+        <a class="button" href="/another-page" style="text-decoration: none;">
+            <div class="text-wrapper-7">Choose place to go with me!</div>
+        </a>
       </div>
     </div>
   </div>
@@ -532,6 +531,7 @@
 }
 /* Third Section */
 .filters-sidebar {  
+  font-family: "Inter-SemiBold";
   display: flex;
   width: 1311px;
   height: 361px;
@@ -555,7 +555,7 @@
   position: relative;
   width: fit-content;
   margin-top: -1.00px;
-  font-family: var(--heading-desktop-h6-font-family);
+  font-family: "Inter-Bold", Helvetica;
   font-weight: var(--heading-desktop-h6-font-weight);
   color: var(--colors-theme-heading-color);
   font-size: var(--heading-desktop-h6-font-size);
@@ -703,7 +703,7 @@
   position: relative;
   width: fit-content;
   margin-top: -1.00px;
-  font-family: var(--body-small-font-family);
+  font-family: "inter-Regular", Helvetica;
   font-weight: var(--body-small-font-weight);
   font-size: var(--body-small-font-size);
   text-align: center;
@@ -1282,5 +1282,172 @@ align-items: flex-start;
 .discover-turkey-2 .img-2 {
   height: 482px;
   width: 600px;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero {
+    width: 100%;
+    height: 280px;
+    margin: 30px auto;
+  }
+
+  .hero .text-wrapper {
+    font-size: 40px;
+    white-space: normal;
+  }
+
+  .frame {
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    margin: 30px auto;
+  }
+
+  .frame .div-wrapper, .frame .div {
+    width: 100%;
+    padding: 5px 20px;
+  }
+
+  .frame .text-wrapper {
+    font-size: 12px;
+  }
+
+  .filters-sidebar {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    margin: 30px auto;
+  }
+
+  .filters-sidebar .div-3, .filters-sidebar .div-4 {
+    width: 100%;
+  }
+
+  .select, .input {
+    width: 100%;
+    padding: 10px 15px;
+  }
+
+  .checkboxes, .checkboxes-2 {
+    width: 100%;
+  }
+
+  .discover-turkey {
+    padding: 40px 20px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .discover-turkey .text-icons-buttom {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .discover-turkey .img-2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .discover-turkey .button {
+    padding: 0px 30px;
+    height: 50px;
+  }
+
+  .discover-turkey .text-wrapper-7 {
+    font-size: 14px;
+  }
+
+  .discover-turkey .icon-text {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .discover-turkey .group, .discover-turkey .group-2, .discover-turkey .group-3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .discover-turkey .text-wrapper-4, .discover-turkey .text-wrapper-5 {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .discover-turkey .text-wrapper-6 {
+    font-size: 12px;
+  }
+
+  .discover-turkey .rectangle {
+    height: 10px;
+  }
+
+  .box {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .box .rectangule {
+    width: 100%;
+  }
+
+  .filters-sidebar .checkboxes-2 {
+    margin-right: 0;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px){
+  .hero {
+    height: auto; 
+    flex-direction: column; 
+    width: 90%; 
+    margin: 20px auto; 
+  }
+
+  .hero .text-wrapper {
+    font-size: 40px; 
+    text-align: center; 
+    white-space: normal; 
+  }
+
+  .frame {
+    flex-direction: column; 
+    gap: 20px; 
+  }
+
+  .frame .div-wrapper {
+    width: 100%; 
+    font-size: 12px; 
+  }
+
+  .filters-sidebar {
+    flex-direction: column; 
+    width: 100%; 
+    gap: 20px; 
+  }
+
+  .discover-turkey {
+    flex-direction: column;
+    padding: 20px; 
+    gap: 20px; 
+  }
+
+  .discover-turkey .text-wrapper {
+    font-size: 24px; 
+    text-align: center; 
+  }
+
+  .discover-turkey .icon-text {
+    width: 100%; 
+    padding: 20px; 
+  }
+
+  .discover-turkey .button {
+    width: 100%; 
+    height: auto; 
+  }
 }
 </style>

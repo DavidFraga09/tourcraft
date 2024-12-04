@@ -114,9 +114,8 @@ const toggleMenu = () => {
 };
 
 </script>
-
-
 <style>
+
 
 /* Nav Section */
 .navigation{
