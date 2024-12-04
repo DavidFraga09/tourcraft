@@ -488,7 +488,7 @@
 
 .frame .div-wrapper:hover {
   background-color: #4DB09B; 
-  text-color: #ffffff;
+  color: #ffffff;
 }
 
 .frame .text-wrapper {
@@ -833,7 +833,7 @@ align-items: flex-start;
 
 .discover-turkey .guide-1 {
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  line-clamp: 2;
   color: #000000;
   display: -webkit-box;
   font-family: "Inter-Black", Helvetica;
@@ -1079,7 +1079,7 @@ align-items: flex-start;
 
 .discover-turkey-2 .guide-1 {
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  line-clamp: 2;
   color: #000000;
   display: -webkit-box;
   font-family: "Inter-Black", Helvetica;
