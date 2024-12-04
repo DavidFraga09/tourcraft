@@ -831,4 +831,13 @@ export default {
     line-clamp: 1;
     -webkit-box-orient: vertical;
 }
+
+@media (max-width: 768px) {
+  .tours{
+    transform:scale(0.3);
+    margin-left: -10%;
+    margin-bottom: -300%;
+    margin-top: -320%;
+    }
+}
   </style>
