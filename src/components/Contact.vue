@@ -492,7 +492,7 @@
 
 @media (max-width: 768px) {
   .contact-us {
-    transform: scale(0.25);
+    transform: scale(0.2);
     margin-top: -280%;
     margin-bottom: -250%;
   }
