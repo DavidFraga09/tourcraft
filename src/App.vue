@@ -4,22 +4,16 @@
       <router-link to="/home" active-class="active">
         <img src="@/assets/logo.png" alt="Logo" class="logo">
       </router-link>
-      <div class="nav-links">
-        <router-link to="/home" class="nav-link" active-class="active">
-          Home
-        </router-link>
-        <router-link to="/tours" class="nav-link" active-class="active">
-          Tours
-        </router-link>
-        <router-link to="/guides" class="nav-link" active-class="active">
-          Guides
-        </router-link>
-        <router-link to="/about" class="nav-link" active-class="active">
-          About Us
-        </router-link>
-        <router-link to="/contact" class="nav-link" active-class="active">
-          Contact Us
-        </router-link>
+      <button class="navbar-toggler" type="button" @click="toggleMenu" aria-controls="navbarNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div :class="['nav-links', { 'show': isMenuOpen }]">
+        <router-link to="/home" class="nav-link" active-class="active">Home</router-link>
+        <router-link to="/tours" class="nav-link" active-class="active">Tours</router-link>
+        <router-link to="/guides" class="nav-link" active-class="active">Guides</router-link>
+        <router-link to="/about" class="nav-link" active-class="active">About Us</router-link>
+        <router-link to="/contact" class="nav-link" active-class="active">Contact Us</router-link>
         <button @click="navigateTo('/sign-in')" v-if="!isLoggedIn" class="nav-link button-link">
           Sign In
         </button>
@@ -35,24 +29,24 @@
     <main class="content">
       <router-view></router-view>
     </main>
-    
+
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-section">
           <router-link to="/home">
-        <img src="@/assets/logo.png" alt="Logo" class="footer-logo">
+            <img src="@/assets/logo.png" alt="Logo" class="footer-logo">
           </router-link>
           <p>Your platform for connecting and sharing with the community.</p>
           <div class="social-icons">
-        <a href="https://www.facebook.com" target="_blank">
-          <img src="/facebook.svg" alt="Facebook Icon">
-        </a>
-        <a href="https://www.twitter.com" target="_blank">
-          <img src="/twitter.svg" alt="Twitter Icon">
-        </a>
-        <a href="https://www.instagram.com" target="_blank">
-          <img src="/instagram.svg" alt="Instagram Icon">
-        </a>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="/facebook.svg" alt="Facebook Icon">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+              <img src="/twitter.svg" alt="Twitter Icon">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="/instagram.svg" alt="Instagram Icon">
+            </a>
           </div>
         </div>
 
@@ -91,6 +85,7 @@ import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
 const router = useRouter();
 const isLoggedIn = ref(false);
+const isMenuOpen = ref(false);
 
 const auth = getAuth();
 
@@ -113,13 +108,43 @@ const handleSignOut = () => {
 const navigateTo = (path) => {
   router.push(path);
 };
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+};
+
+const closeMenu = () => {
+  isMenuOpen.value = false;
+};
+
+const scrollToSection = (sectionId) => {
+  nextTick(() => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+};
+
+const handleButtonClick = (route) => {
+  scrollToSection('home');
+  setTimeout(() => {
+    if (route === 'home') router.push('/');
+    else if (route === 'aboutus') router.push('/AboutUS');
+    else if (route === 'contact') router.push('/Contact');
+    else if (route === 'pricing') router.push('/Pricing');
+    else if (route === 'features') router.push('/Features');
+    else if (route === 'signin') router.push('/SignIn');
+    else if (route === 'login') router.push('/Login');
+  }, 500);
+};
 </script>
 
 
 <style>
 
 /* Nav Section */
-.navigation {
+.navigation{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -171,6 +196,15 @@ const navigateTo = (path) => {
 
 .button-link:hover {
   background-color: #f0f0f0;
+}
+
+.navbar-toggler {
+  border-color: #fff;
+  /* Color del borde */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* Footer Styles */
@@ -258,101 +292,75 @@ const navigateTo = (path) => {
   transform: scale(1.2);
 }
 
-@media (max-width: 768px) {
-  /* Navegación */
-  .navigation {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 20px;
-  }
 
-  .logo {
-    width: 200px; /* Ajusta el tamaño del logo */
-  }
 
+/* Estilos para el botón de menú y el comportamiento en pantallas pequeñas */
+@media (max-width: 992px) {
   .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .nav-link,
-  .button-link {
-    font-size: 16px;
-    padding: 12px 20px;
-    font-family: "Inter", Helvetica;
-  }
-
-  .nav-link:hover {
-    font-weight: bold;
-  }
-
-  .button-link {
-    background: none;
-    border: 2px solid #000000;
-    border-radius: 38px;
-    cursor: pointer;
-  }
-
-  /* Ajuste del contenido */
-  .content {
+    display: none; /* El menú está oculto por defecto */
+    background-color: rgba(247, 248, 249, 0.95);
     padding: 20px;
-    margin-top: 100px;
+    border-radius: 10px;
+    margin-top: 10px;
+    flex-direction: column; /* Menú en columna */
   }
 
-  /* Pie de página */
-  .footer-content {
-    grid-template-columns: repeat(3, 1fr); /* Usamos 3 columnas, igual que en el diseño de escritorio */
-    gap: 2rem;
-    padding: 0 20px;
-  }
-
-  .footer-section ul {
-    margin-left: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .footer-logo {
-    margin: 0 auto;
-    width: 150px;
-  }
-
-  /* Ajuste de iconos sociales */
-  .social-icons a img {
-    width: 25px;
-    height: 25px;
-    margin: 5px;
-  }
-}
-
-@media (max-width: 480px) {
-  .navigation {
-    display: flex;
-    flex-direction: column; /* Cambiar de fila a columna */
-    align-items: center; /* Centrar los elementos en el eje horizontal */
-    justify-content: center;
-    padding: 0 20px;
-    width: 100%;
-    max-width: 960px; /* Limitar el ancho máximo */
-    margin: 0 auto; /* Centrar horizontalmente */
-  }
-
-  .nav-links {
-    display: flex;
-    flex-direction: column; /* Alinear los elementos verticalmente */
-    align-items: center; /* Centrar los enlaces de navegación */
-    gap: 15px; /* Espacio entre los enlaces */
-    margin-top: 0;
+  .nav-links.show {
+    display: flex; /* Muestra el menú cuando se activa */
   }
 
   .logo {
-    width: 180px; /* Ajusta el tamaño del logo */
-    margin-bottom: -50px;
+    width: 150px;
+    margin-left: -250px;
   }
 
-  .navigation {
-    padding: 0.5rem;
+  /* Estilo del botón de hamburguesa */
+  .navbar-toggler {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #0f0f0f;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+
+  /* Icono de la hamburguesa */
+  .navbar-toggler-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #131313;
+    display: inline-block;
+    position: relative;
+  }
+
+  /* Líneas del icono de hamburguesa */
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    transition: all 0.3s ease;
+  }
+
+  /* Espaciado de las líneas del icono */
+  .navbar-toggler-icon::before {
+    top: -8px;
+  }
+
+  .navbar-toggler-icon::after {
+    top: 8px;
+  }
+
+  /* Estilo para cuando el menú está abierto */
+  .nav-links.show {
+   display: flex;
+   flex-direction:row;
+   margin-top: 200px;
+   margin-left: -500px;
+   transform: scale(0.4);
   }
 
   .content {
