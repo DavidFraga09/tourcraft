@@ -1219,7 +1219,7 @@ width: 499px;
 
 .banner-3 .text-wrapper {
 -webkit-box-orient: vertical;
--webkit-line-clamp: 2;
+line-clamp: 2;
 color: #000000;
 display: -webkit-box;
 font-family: "Inter-Black", Helvetica;
@@ -1253,7 +1253,6 @@ width: 372px;
   color: #000000;
   font-family: "Inter-Regular", Helvetica;
   font-size: 16px;
-<<<<<<< HEAD
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
