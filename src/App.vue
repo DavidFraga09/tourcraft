@@ -113,31 +113,6 @@ const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
 
-const closeMenu = () => {
-  isMenuOpen.value = false;
-};
-
-const scrollToSection = (sectionId) => {
-  nextTick(() => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  });
-};
-
-const handleButtonClick = (route) => {
-  scrollToSection('home');
-  setTimeout(() => {
-    if (route === 'home') router.push('/');
-    else if (route === 'aboutus') router.push('/AboutUS');
-    else if (route === 'contact') router.push('/Contact');
-    else if (route === 'pricing') router.push('/Pricing');
-    else if (route === 'features') router.push('/Features');
-    else if (route === 'signin') router.push('/SignIn');
-    else if (route === 'login') router.push('/Login');
-  }, 500);
-};
 </script>
 
 
