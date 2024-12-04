@@ -372,7 +372,7 @@ const handleButtonClick = (route) => {
   }
   
   .footer-section {
-    text-align: center;
+    text-align: center; 
 }
 }
 </style>
