@@ -240,17 +240,8 @@
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </div>
 </template>
-=======
-      </div>
-  </template>
-  
-  <script>
-  import { defineComponent } from "vue";
-  import { getFirestore, collection, addDoc } from "firebase/firestore";
->>>>>>> 2ab4ffb8631928c8052eb5ff1f675d8b1edcf5dd
 
 <script setup>
 import { ref } from 'vue';
@@ -1456,11 +1447,7 @@ width: 372px;
     line-height: 1.5;
   }
 }
-</style>
-=======
-  font-weight: 500;
-}
-
+  
 .button input {
   width: 100%;
   padding: 10px;
@@ -1473,4 +1460,4 @@ width: 372px;
   border-color: #007bff; 
 }
   </style>
->>>>>>> 2ab4ffb8631928c8052eb5ff1f675d8b1edcf5dd
+
