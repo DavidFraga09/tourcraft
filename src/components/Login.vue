@@ -173,7 +173,7 @@ export default {
   }
 
   .login .overlap {
-    margin-left: -295%;
+    margin-left: -290%;
     transform: scale(0.6);
   }
 
