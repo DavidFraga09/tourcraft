@@ -5,7 +5,7 @@
       <div class="left">
         <div class="overlap-group">
           <p class="explore-riviera-maya">
-            <span class="text-wrapper">Explore&nbsp;&nbsp;Riviera Maya </span> <span class="span">&nbsp;</span>
+            <span class="text-wrapper">Explore&nbsp;&nbsp;Riviera Maya </span><span class="span">&nbsp;</span>
           </p>
           <div class="text">
             <div class="text-wrapper-2">Welcome to TourCraft</div>
@@ -27,8 +27,14 @@
           <div class="input-2">
             <div class="title-2">Password</div>
             <div class="input-field-2">
-              <input v-model="password" ref="passwordField" class="text-2" placeholder="Your password" type="password" />
-              <i class="fas fa-eye" @click="togglePasswordVisibility"></i>
+              <input
+                v-model="password"
+                ref="passwordField"
+                class="text-2"
+                placeholder="Your password"
+                :type="passwordVisible ? 'text' : 'password'"
+              />
+              <i class="fas" :class="[passwordVisible ? 'fa-eye-slash' : 'fa-eye']" @click="togglePasswordVisibility"></i>
             </div>
           </div>
 
@@ -45,24 +51,32 @@
           <div class="text-wrapper-6">Or with</div>
           <img class="line" src="img/line-20.svg" alt="Line" />
           <img class="line-2" src="img/line-21.svg" alt="Line" />
+
+          <!-- Botón de Login -->
           <div class="button-primary">
             <button class="button" @click="handleLogin">Log in</button>
           </div>
-          <div class="button-with-centered" @click="loginWith('Facebook')">
+
+          <!-- Botón de Facebook -->
+          <div class="button-with-centered" @click="loginWithFacebook">
             <div class="frame">
-              <img class="img" src="img/facebook.svg" alt="Facebook" />
+              <img class="img" src="@/assets/facebook.png" alt="Facebook" />
               <div class="text-wrapper-7">Facebook</div>
             </div>
           </div>
-          <div class="frame-wrapper" @click="loginWith('Google')">
+
+          <!-- Botón de Google -->
+          <div class="frame-wrapper" @click="loginWithGoogle">
             <div class="frame">
-              <img class="img" src="img/google.svg" alt="Google" />
+              <img class="img" src="@/assets/google.png" alt="Google" />
               <div class="text-wrapper-7">Google</div>
             </div>
           </div>
+
+          <!-- Registro -->
           <p class="don-t-have-an">
             <span class="text-wrapper-8">Don’t have an account? </span>
-            <a href="#" class="text-wrapper-9" @click.prevent="signUp">Sign up</a>
+            <a href="#" class="text-wrapper-9" @click.prevent="Signin">Sign up</a>
           </p>
         </div>
         <img class="solano" src="@/assets/logo.png" alt="Logo" />
@@ -72,7 +86,7 @@
 </template>
 
 <script>
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
 
 export default {
   name: 'Login',
@@ -88,29 +102,46 @@ export default {
       const auth = getAuth();
       signInWithEmailAndPassword(auth, this.email, this.password)
         .then((userCredential) => {
-          // Signed in
           const user = userCredential.user;
           alert(`Logged in as ${user.email}`);
-          // Redirige o realiza una acción real aquí
+          // Realiza redirección o acción aquí
         })
         .catch((error) => {
-          const errorMessage = error.message;
-          alert(`Error: ${errorMessage}`);
+          alert(`Error: ${error.message}`);
         });
     },
     forgotPassword() {
       alert('Redirecting to Forgot Password page...');
-      // Redirige a la página de recuperación de contraseña
       this.$router.push('/forgot-password');
     },
-    signUp() {
-      alert('Redirecting to Sign Up page...');
-      // Redirige a la página de registro
-      this.$router.push('/sign-up');
+    Signin() {
+      this.$router.push('/Sign-in');
     },
-    loginWith(platform) {
-      alert(`Logging in with ${platform}`);
-      // Realiza la acción correspondiente para cada plataforma
+    loginWithGoogle() {
+      const auth = getAuth();
+      const provider = new GoogleAuthProvider();
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          const user = result.user;
+          alert(`Logged in with Google as ${user.email}`);
+          // Redirige o realiza acciones aquí
+        })
+        .catch((error) => {
+          alert(`Error logging in with Google: ${error.message}`);
+        });
+    },
+    loginWithFacebook() {
+      const auth = getAuth();
+      const provider = new FacebookAuthProvider();
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          const user = result.user;
+          alert(`Logged in with Facebook as ${user.email}`);
+          // Redirige o realiza acciones aquí
+        })
+        .catch((error) => {
+          alert(`Error logging in with Facebook: ${error.message}`);
+        });
     },
     togglePasswordVisibility() {
       this.passwordVisible = !this.passwordVisible;
@@ -123,7 +154,56 @@ export default {
 };
 </script>
 
+
 <style scoped>
+@media (max-width: 768px) {
+  .login {
+    flex-direction:column;
+    margin-top: -120px;
+    margin-bottom: -20px;
+  }
+
+  .login .left {
+    display: none;
+  }
+
+  .login .overlap-group {
+    width: 100%;
+    height: auto;
+  }
+
+  .login .overlap {
+    margin-left: -270%;
+    transform: scale(0.6);
+  }
+
+  .login .group {
+    width: 100%;
+  }
+
+  .login .explore-riviera-maya {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .login .text-wrapper-2 {
+    font-size: 20px;
+  }
+
+  .login .p {
+    font-size: 14px;
+  }
+
+  .login .frame-wrapper {
+    width: 100%;
+  }
+
+  .login .button-primary,
+  .login .button-with-centered {
+    width: 100%;
+  }
+}
+
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://fonts.googleapis.com/css?family=Commissioner:400,var(--paragraph-p3-semi-bold-font-weight),italic|Golos+Text:400,500,700,600|Inter:500,400,900,600");
 
@@ -177,35 +257,49 @@ a {
 .login .overlap-group {
   position: relative;
   width: 660px;
-  height: 693px;
+  height: 640px;
   background-image: url('@/assets/monument.jpg');
   background-size: cover;
   background-position: 50% 50%;
 }
 
+.login .overlap-group::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Capa negra semitransparente */
+  z-index: 1; /* Coloca la capa encima de la imagen */
+}
+
 .login .explore-riviera-maya {
   position: absolute;
   width: 633px;
-  top: 163px;
+  top: 155px;
   left: 12px;
-  text-shadow: 0px 4px 4px #00000040;
+  text-shadow: 0px 4px 4px #05050548;
   font-family: "Poppins-Bold", Helvetica;
   font-weight: 400;
-  color: var(--white);
+  color: #ffffff;
   font-size: 40px;
   text-align: center;
   letter-spacing: 0;
   line-height: 29.2px;
   white-space: nowrap;
+  z-index: 2
 }
 
 .login .text-wrapper {
   font-weight: 700;
+
 }
 
 .login .span {
   font-family: "Playfair Display-Bold", Helvetica;
   font-weight: 700;
+
 }
 
 .login .text {
@@ -217,14 +311,15 @@ a {
   justify-content: center;
   gap: 5.64px;
   position: absolute;
-  top: 279px;
+  top: 250px;
   left: 86px;
+  z-index: 2
 }
 
 .login .text-wrapper-2 {
   position: relative;
   width: 425px;
-  text-shadow: 0px 4px 4px #00000040;
+  text-shadow: 0px 4px 4px #02020237;
   font-family: "Poppins-SemiBold", Helvetica;
   font-weight: 600;
   color: #ffffff;
@@ -237,7 +332,7 @@ a {
 .login .p {
   position: absolute;
   width: 410px;
-  top: 340px;
+  top: 315px;
   left: 124px;
   font-family: "Poppins-Medium", Helvetica;
   font-weight: 500;
@@ -246,6 +341,7 @@ a {
   text-align: center;
   letter-spacing: -0.34px;
   line-height: 23.8px;
+  z-index: 2
 }
 
 .login .overlap {
@@ -514,7 +610,15 @@ a {
   border-radius: 10px;
   border: 1px solid;
   border-color: #d8dadc;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
 }
+
+.login .button-with-centered:hover {
+  background-color: #d8d8d8;
+  transform: scale(1.05);
+}
+
 
 .login .frame {
   display: inline-flex;
@@ -554,6 +658,13 @@ a {
   border-radius: 10px;
   border: 1px solid;
   border-color: #d8dadc;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.login .frame-wrapper:hover {
+  background-color: #d8d8d8;
+  transform: scale(1.05);
 }
 
 .login .don-t-have-an {
@@ -582,9 +693,10 @@ a {
 .login .solano {
   position: absolute;
   width: 193px;
-  height: 91px;
-  top: 0;
-  left: 560px;
+  height: 70px;
+  top: -20px;
+  left: 360px;
   object-fit: cover;
+  z-index: 20;
 }
 </style>

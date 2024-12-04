@@ -1,9 +1,9 @@
 <template>
     <div class="contact-us">
-      <div class="container">
+      <div class="div">
         <div class="form">
           <div class="banner">
-            <img class="img" src="@/assets/Hero.png" alt="Banner" />
+            <img class="img" src="@/assets/banner.png" />
             <div class="frame">
               <div class="text">
                 <p class="do-you-have-any">Do You Have Any Questions Or Want Some Clarification?</p>
@@ -12,7 +12,7 @@
             </div>
           </div>
           <div class="form-2">
-            <div class="header">
+            <div class="div-2">
               <p class="p">Contact Us For Any Questions</p>
               <p class="text-wrapper-2">Eu id cras morbi consectetur viverra eleifend pellentesque dui.</p>
             </div>
@@ -42,98 +42,29 @@
                 <div class="input-3"></div>
               </div>
             </div>
-            <div class="button-wrapper">
-              <button class="send-message">Send Message</button>
-            </div>
+            <div class="div-wrapper"><div class="text-wrapper-4">Send Message</div></div>
           </div>
         </div>
-        <img class="image" src="@/assets/Hero.png" alt="Image" />
-        <div class="hero">
-          <div class="text-wrapper-5">Contact Us</div>
-        </div>
-        <div class="navbar">
-          <router-link to="/" class="text-wrapper-6">Home</router-link>
-          <router-link to="/tours" class="text-wrapper-6">Tours</router-link>
-          <router-link to="/guides" class="text-wrapper-6">Guides</router-link>
-          <router-link to="/about" class="text-wrapper-6">About Us</router-link>
-          <router-link to="/contact" class="text-wrapper-7">Contact Us</router-link>
-          <router-link to="/sign-in" class="sign-up">
-            <div class="sign-up-text">Sign In</div>
-          </router-link>
-          <router-link to="/log-in" class="sign-up-wrapper">
-            <div class="sign-up-text-wrapper">
-              <div class="sign-up-text-2">Log In</div>
-            </div>
-          </router-link>
-        </div>
-        <div class="overlap">
-          <img class="solano" src="@/assets/image.png" alt="Solano" />
-        </div>
-        <div class="footer">
-          <div class="text-icons-wrapper">
-            <div class="text-icons">
-              <div class="logo-section">
-                <div class="logo">
-                  <img class="solano-2" src="@/assets/logo.png" alt="Solano" />
-                  <div class="text-wrapper-8">TourCraft</div>
-                </div>
-                <p class="text-wrapper-9">
-                  Lorem ipsum dolor sit amet consectetur. Enim nulla suscipit leo integer bibendum ultrices. Nulla sed
-                  arcu amet montes tellus sit sem quis.
-                </p>
-                <div class="social-icons">
-                  <div class="social-icon"><i class="fab fa-facebook-f"></i></div>
-                  <div class="social-icon"><i class="fab fa-twitter"></i></div>
-                  <div class="social-icon"><i class="fab fa-instagram"></i></div>
-                </div>
-              </div>
-              <div class="useful-links">
-                <div class="text-wrapper-10">Useful Links</div>
-                <div class="links">
-                  <router-link to="/">Home</router-link>
-                  <router-link to="/tours">Tours</router-link>
-                  <router-link to="/guides">Guides</router-link>
-                  <router-link to="/about">About Us</router-link>
-                  <router-link to="/contact">Contact Us</router-link>
-                </div>
-              </div>
-              <div class="contact-info">
-                <div class="text-wrapper-10">Contact</div>
-                <div class="frame-2">
-                  <div class="frame-3">
-                    <img class="img-2" src="/call.svg" alt="Phone" />
-                    <div class="text-wrapper-11">(+52) 55 2110 5157</div>
-                  </div>
-                  <div class="frame-3">
-                    <img class="img-2" src="/email.svg" alt="Mail" />
-                    <div class="text-wrapper-12">hello@utrivieramaya.edu.mx</div>
-                  </div>
-                  <div class="frame-3">
-                    <img class="img-2" src="/location.svg" alt="Map Pin" />
-                    <p class="text-wrapper-13">Playa del Carmen, Quintana Roo, Mexico</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p class="text-wrapper-14">©Copyright 2024 Tourcraft. All Rights Reserved</p>
-        </div>
+        <img class="image" src="@/assets/ubicacion.png" />
+        <img class="image2" src="@/assets/banner2.png" />
+
+        <div class="hero"><div class="text-wrapper-5">Contact Us</div></div>
         <div class="group">
           <div class="address">
-            <img class="icon" src="/location.svg" alt="Map Pin" />
+            <img class="icon" src="@/assets/location.png" />
             <div class="text-wrapper-15">Address</div>
             <p class="avenida-paseo-del">
-              Avenida Paseo Del Mayab 4000 Región 79, Solidaridad, 77710<br />Playa Del Carmen, Quintana Roo
+              Avenida Paseo Del Mayab 4000 Región 79, Solidaridad, 77710<br />playa De Carmen, Quintana Roo
             </p>
           </div>
           <div class="email">
-            <img class="icon-2" src="/email.svg" alt="Mail" />
+            <img class="icon-2" src="@/assets/email.png" />
             <div class="text-wrapper-16">Email</div>
             <div class="text-wrapper-17">2302032@utrivieramaya.edu.mx</div>
             <div class="text-wrapper-17">TourCraft@icloud.com</div>
           </div>
           <div class="phone">
-            <img class="icon-2" src="/call.svg" alt="Phone" />
+            <img class="icon-2" src="@/assets/phone.png" />
             <div class="text-wrapper-16">Phone</div>
             <div class="text-wrapper-17">(984) 707-4989</div>
             <div class="text-wrapper-17">(55) 2670-3634</div>
@@ -141,54 +72,31 @@
         </div>
       </div>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'ContactUs'
-  };
-  </script>
-  
-  <style scoped>
-  @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-  @import url("https://fonts.googleapis.com/css?family=Commissioner:400,var(--paragraph-p3-semi-bold-font-weight),italic|Golos+Text:400,500,700,600|Inter:500,400,900,600");
-  
-  * {
-    -webkit-font-smoothing: antialiased;
-    box-sizing: border-box;
-  }
-  
-  html,
-  body {
-    margin: 0px;
-    height: 100%;
-  }
-  
-  button:focus-visible {
-    outline: 2px solid #4a90e2 !important;
-    outline: -webkit-focus-ring-color auto 5px !important;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  .contact-us {
+</template>
+
+<script>
+
+</script>
+
+<style scoped>
+.contact-us {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
+    width: 10%;
+    margin-top: -200px;
+    margin-bottom: -400px;
   }
   
-  .contact-us .container {
+ .div {
     background-color: #ffffff;
     width: 1600px;
     height: 2868px;
     position: relative;
   }
   
-  .contact-us .form {
+.form {
     display: inline-flex;
     align-items: flex-start;
     gap: 48px;
@@ -198,323 +106,395 @@
     left: 80px;
   }
   
-  .contact-us .banner {
+.banner {
     position: relative;
     width: 368px;
     height: 602px;
     background-color: #000000;
     border-radius: 20px;
     overflow: hidden;
-    background-image: url('@/assets/Hero.png');
+    background-image: url(https://c.animaapp.com/28w77pOF/img/banner.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+
+.img {
+    position: absolute;
+    width: 245px;
+    height: 223px;
+    top: 81px;
+    left: 46px;
+  }
+  
+.frame {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    position: absolute;
+    top: 354px;
+    left: 49px;
+  }
+  
+.text {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+.do-you-have-any {
+    position: relative;
+    width: 269px;
+    height: 40px;
+    margin-top: -1.00px;
+    font-family: "Inter", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  
+  .text-wrapper {
+    position: relative;
+    width: fit-content;
+    font-family: "Golos Text", Helvetica;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  
+ .form-2 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+ .div-2 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+.p {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Golos Text", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+.text-wrapper-2 {
+    position: relative;
+    width: 649px;
+    height: 34px;
+    opacity: 0.6;
+    font-family: "Inter", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  
+.inputs {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+.text-input {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 48px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+.text-input-2 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+.input {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Golos Text", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+  
+.input-2 {
+    position: relative;
+    width: 368px;
+    height: 50px;
+    border: 1px solid;
+    border-color: #000000;
+    opacity: 0.6;
+  }
+  
+.text-wrapper-3 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Golos Text", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .text-input-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  
+.input-3 {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 92px;
+    border: 1px solid;
+    border-color: #000000;
+    opacity: 0.6;
+  }
+  
+.div-wrapper {
+    display: flex;
+    width: 784px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0px 40px;
+    position: relative;
+    background-color: #000000;
+    border-radius: 12px;
+  }
+  
+.text-wrapper-4 {
+    position: relative;
+    width: fit-content;
+    font-family: "Golos Text", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+.image {
+    position: absolute;
+    width: 1452px;
+    height: 300px;
+    top: 1770px;
+    left: 74px;
+  }
+.image2 {
+    position: absolute;
+    width: 1452px;
+    height: 150px;
+    top: 2200px;
+    left: 74px;
+  }
+  
+.hero {
+    display: flex;
+    width: 1200px;
+    height: 320px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    top: 272px;
+    left: 200px;
+    background-color: #00000033;
+    border-radius: 20px;
+    overflow: hidden;
+    background-image: url(https://c.animaapp.com/28w77pOF/img/hero.png);
     background-size: cover;
     background-position: 50% 50%;
   }
   
-  .contact-us .img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .contact-us .frame {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-  }
-  
-  .contact-us .text {
+.text-wrapper-5 {
+    position: relative;
+    width: fit-content;
+    font-family: "Golos Text", Helvetica;
+    font-weight: 700;
     color: #ffffff;
+    font-size: 60px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
   }
   
-  .contact-us .do-you-have-any {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .contact-us .text-wrapper {
-    font-size: 18px;
-  }
-  
-  .contact-us .form-2 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .contact-us .header {
-    margin-bottom: 20px;
-  }
-  
-  .contact-us .p {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .contact-us .text-wrapper-2 {
-    font-size: 16px;
-    color: #666666;
-  }
-  
-  .contact-us .inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .contact-us .text-input {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .contact-us .text-input-2 {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .contact-us .input {
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    width: 100%;
-  }
-  
-  .contact-us .input-2,
-  .contact-us .input-3 {
-    height: 1px;
-    background-color: #cccccc;
-  }
-  
-  .contact-us .button-wrapper {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .contact-us .send-message {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .contact-us .send-message:hover {
-    background-color: #0056b3;
-  }
-  
-  .contact-us .image {
+.group {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: auto;
+    width: 1132px;
+    height: 163px;
+    top: 687px;
+    left: 262px;
   }
   
-  .contact-us .hero {
+.address {
     position: absolute;
+    width: 467px;
+    height: 144px;
+    top: 1px;
+    left: 289px;
+  }
+  
+.icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
     top: 0;
+    left: 214px;
+  }
+  
+.text-wrapper-15 {
+    position: absolute;
+    height: 34px;
+    top: 55px;
+    left: 178px;
+    font-family: "Golos Text", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 28px;
+    text-align: right;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+ .avenida-paseo-del {
+    position: absolute;
+    height: 38px;
+    top: 105px;
     left: 0;
-    width: 50%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .contact-us .text-wrapper-5 {
-    font-size: 48px;
-    color: #ffffff;
-    font-weight: bold;
-  }
-  
-  .contact-us .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact-us .text-wrapper-6,
-  .contact-us .text-wrapper-7 {
+    font-family: "Golos Text", Helvetica;
+    font-weight: 400;
+    color: #000000;
     font-size: 16px;
-    color: #333333;
-    text-decoration: none;
-    margin: 0 10px;
+    letter-spacing: 0;
+    line-height: normal;
   }
   
-  .contact-us .sign-up,
-  .contact-us .sign-up-wrapper {
-    display: flex;
+.email {
+    display: inline-flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #ffffff;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  
-  .contact-us .sign-up-text,
-  .contact-us .sign-up-text-wrapper {
-    font-size: 16px;
-  }
-  
-  .contact-us .overlap {
+    gap: 16px;
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    top: 0;
+    left: 883px;
+    transform: rotate(-0.16deg);
   }
   
-  .contact-us .solano {
-    width: 100px;
-    height: auto;
+.icon-2 {
+    position: relative;
+    width: 40.11px;
+    height: 40.11px;
+    margin-top: -0.06px;
+    transform: rotate(0.16deg);
   }
   
-  .contact-us .footer {
-    background-color: #f8f8f8;
-    padding: 40px 20px;
+ .text-wrapper-16 {
+    position: relative;
+    width: fit-content;
+    font-family: "Golos Text", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 28px;
     text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
   }
   
-  .contact-us .text-icons-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px;
+ .text-wrapper-17 {
+    position: relative;
+    width: fit-content;
+    font-family: "Golos Text", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
   }
   
-  .contact-us .text-icons {
-    display: flex;
-    gap: 40px;
-  }
-  
-  .contact-us .logo-section {
-    display: flex;
+ .phone {
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    gap: 16px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    transform: rotate(-0.16deg);
+}
+
+@media (max-width: 768px) {
+  .contact-us {
+    transform: scale(0.1);
+    margin-top: -280%;
+    margin-bottom: -250%;
   }
-  
-  .contact-us .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .contact-us .solano-2 {
-    width: 50px;
-    height: auto;
-  }
-  
-  .contact-us .text-wrapper-8 {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .contact-us .text-wrapper-9 {
-    font-size: 16px;
-    color: #666666;
-    margin-top: 10px;
-  }
-  
-  .contact-us .social-icons {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  .contact-us .social-icon {
-    font-size: 24px;
-    color: #333333;
-  }
-  
-  .contact-us .useful-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .contact-us .text-wrapper-10 {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .contact-us .links {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .contact-us .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .contact-us .frame-2 {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .contact-us .frame-3 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .contact-us .img-2 {
-    width: 20px;
-    height: auto;
-  }
-  
-  .contact-us .text-wrapper-11,
-  .contact-us .text-wrapper-12,
-  .contact-us .text-wrapper-13 {
-    font-size: 16px;
-    color: #333333;
-  }
-  
-  .contact-us .text-wrapper-14 {
-    font-size: 14px;
-    color: #666666;
-    margin-top: 20px;
-  }
-  
-  .contact-us .group {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 20px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact-us .address,
-  .contact-us .email,
-  .contact-us .phone {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .contact-us .icon,
-  .contact-us .icon-2 {
-    width: 20px;
-    height: auto;
-  }
-  
-  .contact-us .text-wrapper-15,
-  .contact-us .text-wrapper-16 {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .contact-us .avenida-paseo-del,
-  .contact-us .text-wrapper-17 {
-    font-size: 16px;
-    color: #333333;
-  }
-  </style>
+}
+</style>

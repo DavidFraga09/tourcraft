@@ -50,7 +50,7 @@
       <div class="text-wrapper">Tours</div>
       <p class="div">Discover amazing places in the riviera maya</p>
       <div class="text-line">
-        <div class="text-wrapper-2">All Destinations</div>
+        <router-link to="/Tours" class="text-wrapper-2">All Destinations</router-link>
         <img class="line" alt="Line" src="/right-arrow.svg" />
       </div>
     </div>
@@ -114,10 +114,10 @@
           <div class="div">
             <p class="p">What would be your ideal personal guide for you?</p>
             <div class="text-line-2">
-              <a href="/another-page" class="text-wrapper-2">Visit</a>
-              <a href="/another-page">
+              <router-link to="/Guides" class="text-wrapper-2">Visit</router-link>
+            <router-link to="/Guides">
                 <img class="line" alt="Line" src="/right-arrow.svg" />
-              </a>
+            </router-link>
             </div>
           </div>
         </div>
@@ -129,10 +129,10 @@
           <div class="div">
             <p class="p">What would be your ideal personal guide for you?</p>
             <div class="text-line-2">
-                <a href="/another-page" class="text-wrapper-2">Visit</a>
-              <a href="/another-page">
-                <img class="line" alt="Line" src="/right-arrow.svg" />
-              </a>
+              <router-link to="/Guides" class="text-wrapper-2">Visit</router-link>
+            <router-link to="/Guides">
+              <img class="line" alt="Line" src="/right-arrow.svg" />
+            </router-link>
             </div>
           </div>
         </div>
@@ -144,10 +144,10 @@
           <div class="div">
             <p class="p">What would be your ideal personal guide for you?</p>
             <div class="text-line-2">
-                <a href="/another-page" class="text-wrapper-2">Visit</a>
-              <a href="/another-page">
-                <img class="line" alt="Line" src="/right-arrow.svg" />
-              </a>
+              <router-link to="/Guides" class="text-wrapper-2">Visit</router-link>
+            <router-link to="/Guides">
+              <img class="line" alt="Line" src="/right-arrow.svg" />
+            </router-link>
             </div>
           </div>
         </div>
@@ -322,7 +322,7 @@
 
 .img-text .div {
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    line-clamp: 2;
     color: #ffffff;
     display: -webkit-box;
     font-family: "Inter-Regular", Helvetica;
@@ -569,7 +569,7 @@
 
 .popular-destinations .div {
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  line-clamp: 2;
   color: #000000;
   display: -webkit-box;
   font-family: "Inter-Regular", Helvetica;
@@ -596,7 +596,7 @@
 
 .popular-destinations .text-wrapper-2 {
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  line-clamp: 1;
   color: #000000;
   display: -webkit-box;
   font-family: "Golos Text-SemiBold", Helvetica;
@@ -839,7 +839,7 @@
 
 .news-from-our-blog .mauris-a-sem {
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  line-clamp: 1;
   color: #000000;
   display: -webkit-box;
   font-family: "Inter-Regular", Helvetica;
@@ -895,7 +895,7 @@
 
 .news-from-our-blog .text-wrapper {
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  line-clamp: 1;
   color: #000000;
   display: -webkit-box;
   font-family: "Inter-Regular", Helvetica;
@@ -923,7 +923,7 @@
 
 .news-from-our-blog .p {
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  line-clamp: 2;
   color: #000000;
   display: -webkit-box;
   font-family: "Golos Text-SemiBold", Helvetica;
@@ -949,7 +949,7 @@
 
 .news-from-our-blog .text-wrapper-2 {
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  line-clamp: 1;
   color: #000000;
   display: -webkit-box;
   font-family: "Golos Text-Regular", Helvetica;
@@ -1035,7 +1035,7 @@
 
 .turn-your-vacation .eu-id-cras-morbi {
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  line-clamp: 3;
   color: #000000;
   display: -webkit-box;
   font-family: "Inter-Regular", Helvetica;
@@ -1082,7 +1082,7 @@
 
 .turn-your-vacation .text-wrapper-2 {
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  line-clamp: 1;
   color: #000000;
   display: -webkit-box;
   font-family: "Golos Text-Medium", Helvetica;
@@ -1100,7 +1100,7 @@
 
 .turn-your-vacation .text-wrapper-3 {
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  line-clamp: 1;
   color: #000000;
   display: -webkit-box;
   font-family: "Golos Text-Medium", Helvetica;

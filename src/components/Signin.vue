@@ -1,27 +1,31 @@
 <template>
-    <div class="container">
+  <div class="container">
     <div class="left-section">
       <div class="image-container">
         <img src="@/assets/monument.jpg" class="responsive-image" alt="Explore Riviera Maya" />
-      </div>      
+      </div>
       <div class="text-content">
-  <h1 class="boldest" >Explore Riviera Maya</h1>
-  <p>
-    <span class="bolder">Welcome</span> 
-    <span class="bolder">to</span> 
-    <span class="bolder">TourCraft</span>
-  </p>
-  <div class="text-conten">
-    <p class="bold" style="font-size: 1.0rem;">Riviera Maya at your own pace: discover, book 
-      <span class="line-break">and live your adventure.</span>
-    </p>
-  </div>
-</div>
+        <h1 class="boldest">Explore Riviera Maya</h1>
+        <p>
+          <span class="bolder">Welcome to</span>
+          <span class="bolder">TourCraft</span>
+        </p>
+        <div class="text-conten">
+          <p class="bold" style="font-size: 1.0rem;">
+            Riviera Maya at your own pace: discover, book 
+            <span class="line-break">and live your adventure.</span>
+          </p>
+        </div>
+      </div>
     </div>
     <div class="right-section">
       <form @submit.prevent="handleSubmit" class="registration-form">
-        <h2>Create account</h2>
-        <p>Join with us!</p>
+        <div class="h2">
+          <h2>Create account</h2>
+        </div>
+        <div class="p">
+          <p>Join with us!</p>
+        </div>
         <div class="form-group">
           <input v-model="form.firstName" type="text" name="first-name" placeholder="First name" required />
           <input v-model="form.lastName" type="text" name="last-name" placeholder="Last name" required />
@@ -32,10 +36,8 @@
         </div>
         <div class="form-group">
           <input v-model="form.password" type="password" name="password" placeholder="Password" required />
-          <input v-model="form.confirmPassword" type="password" name="confirm-password" placeholder="Confirm password" required />
+          <input v-model="form.confirmPassword" type="password" name="confirm-password" placeholder="Confirm password" required/>
         </div>
-
-        <!-- Form options section -->
         <div class="form-options">
           <label>
             <input v-model="form.remember" type="checkbox" name="remember" /> Remember me
@@ -44,8 +46,6 @@
             <a href="#" class="forgot-password">Forgot password?</a>
           </div>
         </div>
-
-        <!-- Buttons container -->
         <div class="buttons-container">
           <div class="button-container">
             <button type="submit" class="btn create-account-btn">Create account</button>
@@ -57,13 +57,9 @@
             </button>
           </div>
         </div>
-
-        <!-- Don't have an account section -->
         <div class="donhave">
-          <p>Don't have an account? <a href="#">Log In</a></p>
+          <p>Already have an account? <a href="#">Sing In</a></p>
         </div>
-
-        <!-- Terms and privacy policy section -->
         <div class="terms-container">
           <label>
             <input v-model="form.agree" type="checkbox" name="terms" required />
@@ -73,54 +69,65 @@
       </form>
     </div>
   </div>
-  </template>
-  
-  <script>
-  import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-  export default {
-    name: "RegistrationForm",
-    data() {
-      return {
-        form: {
-          firstName: "",
-          lastName: "",
-          email: "",
-          dob: "",
-          password: "",
-          confirmPassword: "",
-          remember: false,
-          agree: false,
-        },
-      };
-    },
-    methods: {
-    handleSubmit() {
-      // Handle form submission
-    },
-    async signInWithGoogle() {
-      const auth = getAuth();
-      const provider = new GoogleAuthProvider();
-      try {
-        const result = await signInWithPopup(auth, provider);
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        //const credential = GoogleAuthProvider.credentialFromResult(result);
-        //const token = credential.accessToken;
-        // The signed-in user info.
-        const user = result.user;
-        console.log('User signed in:', user);
-        // Redirect or perform other actions after successful sign-in
-      } catch (error) {
-        // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        const email = error.customData.email;
-        const credential = GoogleAuthProvider.credentialFromError(error);
-        console.error('Error during sign-in with Google:', errorCode, errorMessage, email, credential);
-      }
-    }
+</template>
+
+<script setup>
+import { ref } from "vue";
+import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { useRouter } from "vue-router";
+
+const form = ref({
+  firstName: "",
+  lastName: "",
+  email: "",
+  dob: "",
+  password: "",
+  confirmPassword: "",
+  remember: false,
+  agree: false,
+});
+
+const router = useRouter();
+
+const handleSubmit = async () => {
+  if (!form.value.agree) {
+    alert("You must agree to the terms and privacy policy.");
+    return;
+  }
+
+  if (form.value.password !== form.value.confirmPassword) {
+    alert("Passwords do not match.");
+    return;
+  }
+
+  const auth = getAuth();
+  try {
+    const userCredential = await createUserWithEmailAndPassword(auth, form.value.email, form.value.password);
+    console.log("User registered successfully:", userCredential.user);
+    // Redirigir a otra página después de un registro exitoso
+    router.push("/home");
+  } catch (error) {
+    console.error("Error during registration:", error.code, error.message);
+    alert("Registration failed: " + error.message);
   }
 };
-  </script>
+
+const signInWithGoogle = async () => {
+  const auth = getAuth();
+  const provider = new GoogleAuthProvider();
+
+  try {
+    const result = await signInWithPopup(auth, provider);
+    const user = result.user;
+    console.log("User signed in with Google:", user);
+    router.push("/home");
+  } catch (error) {
+    console.error("Error during sign-in with Google:", error.code, error.message);
+    alert("Google sign-in failed: " + error.message);
+  }
+};
+</script>
+  
   
   <style scoped>
   :root {
@@ -133,7 +140,7 @@
   
   body {
     padding-bottom: 50px;
-    font-family: Arial, sans-serif;
+    font-family: "poppins-bold", Helvetica;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,7 +160,7 @@
   
   .left-section {
     flex: 2;
-    font-family: Arial, sans-serif;
+    font-family: "poppins-bold", Helvetica;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -163,7 +170,7 @@
     text-align: center;
     padding: 400px 40px 30px 30px;
     height: 100%; 
-    z-index: 1;
+    z-index: 1;   
     background-color: rgba(0, 0, 0, 0.9); 
     overflow: hidden;
   }
@@ -195,8 +202,8 @@
   }
 
   .text-content h1 {
-  font-size: 2rem; /* Tamaño grande para el título */
-  font-weight: 900; /* Asegúrate de que sea negrita */
+  font-size: 2.2rem; /* Tamaño grande para el título */
+  font-weight: 700; /* Asegúrate de que sea negrita */
   margin-bottom: 20px; /* Espaciado entre el título y el párrafo */
 }
 
@@ -243,12 +250,22 @@
     flex: 3; 
     padding: 50px 40px; 
     display: flex;
+    font-family: "poppins-bold", Helvetica;
     flex-direction: column;
     justify-content: center; 
     align-items: center; 
     height: 100%; 
     overflow-y: auto;
   }
+
+  .h2{
+    margin:0;
+
+  }
+
+  .p  {
+    margin: 10px;
+}
   
   .registration-form {
     width: 100%;
@@ -348,8 +365,8 @@
   .google-btn {
     width: 220px;
     height: 50px;
-    background-color: var(--body-text, #f4f4f4);
-    color: #333;
+    background-color: var(--body-text, #2D3748);
+    color: white;
     border-radius: 5px;
     display: flex;
     gap: 8px;
@@ -361,7 +378,7 @@
   }
   
   .google-btn:hover {
-    background-color: #e0e0e0;
+    background-color: #242b37;
     transform: scale(1.05);
   }
   
@@ -374,7 +391,7 @@
   .donhave {
     position: absolute;
     justify-content: center;
-    right: 360px;
+    right: 330px;
     bottom: -90px;
   }
   
@@ -393,4 +410,5 @@
   .forgot-password:hover {
     text-decoration: underline;
   }
+
   </style>
