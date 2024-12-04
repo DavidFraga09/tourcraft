@@ -489,4 +489,12 @@
     left: 0;
     transform: rotate(-0.16deg);
 }
+
+@media (max-width: 768px) {
+  .contact-us {
+    transform: scale(0.25);
+    margin-top: -280%;
+    margin-bottom: -250%;
+  }
+}
 </style>
