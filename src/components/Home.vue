@@ -240,17 +240,6 @@
         </div>
       </div>
       </div>
-    <!-- Final Section
-    <div class="second-banner">
-      <div class="overlap-group">
-        <div class="text-one">
-          <p class="want-to-know-more">Wan To Know More About Us?</p>
-          <div class="text-wrapper-4">Call Us: (+52) 55-2110-5157</div>
-        </div>
-        <img class="icon" alt="Icon" src="@/assets//globo.png" />
-      </div>
-      <img class="icon" alt="Icon" src="@/assets/barco.png" />
-      </div>-->
   </template>
   
   <script>
@@ -1255,81 +1244,4 @@
 .button input:focus {
   border-color: #007bff; 
 }
-
-/* Nineth Section*/
-/*.second-banner {
-  align-items: center;
-  background-color: #000000;
-  height: 139px;
-  position: relative;
-  width: 100%;
-}
-
-.second-banner .overlap-group {
-  height: 99px;
-  left: 486px;
-  position:absolute;
-  top: 17px;
-  width: 469px;
-}
-
-.second-banner .text-one {
-  align-items: center;
-  display: inline-flex;
-  flex-direction: column;
-  gap: 16px;
-  left: 0;
-  position: absolute;
-  top: 6px;
-}
-
-.second-banner .want-to-know-more {
-  color: #ffffff;
-  font-family: Inter-SemiBold, Helvetica;
-  font-size: 32px;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-top: -1.00px;
-  position: relative;
-  text-align: center;
-  width: fit-content;
-}
-
-.second-banner .text-wrapper-4 {
-  color: #ffffff;
-  font-family: Golos Text-SemiBold, Helvetica;
-  font-size: 32px;
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: normal;
-  position: relative;
-  text-align: center;
-  white-space: nowrap;
-  width: fit-content;
-}
-
-.second-banner .icon {
-  height: 19px;
-  left: 28px;
-  position: absolute;
-  top: 0;
-  width: 34px;
-}
-
-.second-banner .img {
-  height: 78px;
-  left: 157px;
-  position: absolute;
-  top: 4px;
-  width: 62px;
-}
-
-.second-banner .icon-2 {
-  height: 72px;
-  left: 1250px;
-  position: absolute;
-  top: 54px;
-  width: 77px;
-}*/
   </style>
