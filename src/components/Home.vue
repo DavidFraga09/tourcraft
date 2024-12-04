@@ -215,13 +215,68 @@
     </div>
   </div>
   
+  <div class="banner">
+    <img class="img" alt="Img" src="@/assets/back-o.png" />
+    <div class="text-buttom-bg">
+      <div class="text-buttom">
+        <div class="text">
+          <p class="be-the-first-to-know">
+            Be the first to know! <br/>
+            Sing up now to receive <br/>
+            exclusive updates and more
+            <br/>
+            before our launch!
+          </p>
+          <p class="text-wrapper">
+            facilisi vulputate malesuda libero
+          </p>
+        </div>
+        <div class="button">
+          <input v-model="email" type="email" placeholder="Enter your email" />
+          <button class="div-wrapper" @click="subscribe">
+            <div class="text-wrapper-2">Subscribe</div>
+          </button>
+        </div>
+        </div>
+      </div>
+      </div>
+    <!-- Final Section
+    <div class="second-banner">
+      <div class="overlap-group">
+        <div class="text-one">
+          <p class="want-to-know-more">Wan To Know More About Us?</p>
+          <div class="text-wrapper-4">Call Us: (+52) 55-2110-5157</div>
+        </div>
+        <img class="icon" alt="Icon" src="@/assets//globo.png" />
+      </div>
+      <img class="icon" alt="Icon" src="@/assets/barco.png" />
+      </div>-->
   </template>
   
   <script>
   import { defineComponent } from "vue";
-  
+  import { getFirestore, collection, addDoc } from "firebase/firestore";
+
   export default defineComponent({
     name: "ImgText",
+    data() {
+      return {
+        email: ""
+      };
+    },
+    methods: {
+      async subscribe() {
+        const db = getFirestore();
+        try {
+          await addDoc(collection(db, "subscribers"), {
+            email: this.email
+          });
+          alert("Subscribed successfully!");
+        } catch (e) {
+          console.error("Error adding document: ", e);
+        }
+      }
+    }
   });
   </script>
   
@@ -1108,4 +1163,173 @@
   top: 0;
   width: 499px;
 }
+/* Eight Section */
+.banner {
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 60px 0; 
+  position: relative;
+}
+
+.banner .img {
+  height: 360px;
+  object-fit: cover;
+  align-items: center; 
+  width: 600px;
+}
+
+.banner .text-buttom-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #ffffff;
+  border-radius: 0px 20px 20px 0px;
+  box-shadow: 0px 3px 20px #00000014;
+  gap: 10px;
+  height: 360px;
+  justify-content: center;
+  padding: 0 24px; 
+  width: 600px;
+}
+
+.banner .text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.banner .be-the-first-to-know {
+  font-family: "Golos Text-Bold", Helvetica;
+  font-size: 32px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.banner .text-wrapper {
+  color: #000000;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: 0.6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.banner .button {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 12px;
+  justify-content: space-between;
+  padding: 4px 4px 4px 20px;
+  width: 380px;
+}
+
+.banner .div-wrapper {
+  display: flex; 
+  align-items: center;
+  background-color: #538392;
+  border-radius: 8px;
+  padding: 0px 16px;
+  height: 32px;
+}
+
+.banner .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Golos Text-SemiBold", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.button input {
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border-radius: 4px;
+  outline: none;
+}
+
+.button input:focus {
+  border-color: #007bff; 
+}
+
+/* Nineth Section*/
+/*.second-banner {
+  align-items: center;
+  background-color: #000000;
+  height: 139px;
+  position: relative;
+  width: 100%;
+}
+
+.second-banner .overlap-group {
+  height: 99px;
+  left: 486px;
+  position:absolute;
+  top: 17px;
+  width: 469px;
+}
+
+.second-banner .text-one {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 16px;
+  left: 0;
+  position: absolute;
+  top: 6px;
+}
+
+.second-banner .want-to-know-more {
+  color: #ffffff;
+  font-family: Inter-SemiBold, Helvetica;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.second-banner .text-wrapper-4 {
+  color: #ffffff;
+  font-family: Golos Text-SemiBold, Helvetica;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.second-banner .icon {
+  height: 19px;
+  left: 28px;
+  position: absolute;
+  top: 0;
+  width: 34px;
+}
+
+.second-banner .img {
+  height: 78px;
+  left: 157px;
+  position: absolute;
+  top: 4px;
+  width: 62px;
+}
+
+.second-banner .icon-2 {
+  height: 72px;
+  left: 1250px;
+  position: absolute;
+  top: 54px;
+  width: 77px;
+}*/
   </style>
