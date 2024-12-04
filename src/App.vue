@@ -129,11 +129,11 @@ const scrollToSection = (sectionId) => {
 const handleButtonClick = (route) => {
   scrollToSection('home');
   setTimeout(() => {
-    if (route === 'home') router.push('/');
-    else if (route === 'aboutus') router.push('/AboutUS');
+    if (route === 'home') router.push('/Home');
+    else if (route === 'about') router.push('/About');
     else if (route === 'contact') router.push('/Contact');
     else if (route === 'guides') router.push('/Guides');
-    else if (route === 'signin') router.push('/SignIn');
+    else if (route === 'signin') router.push('/Signin');
     else if (route === 'login') router.push('/Login');
     else if (route === 'tours') router.push('/Tours');
   }, 500);
