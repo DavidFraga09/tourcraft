@@ -410,4 +410,5 @@ const signInWithGoogle = async () => {
   .forgot-password:hover {
     text-decoration: underline;
   }
+
   </style>
