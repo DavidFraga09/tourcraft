@@ -495,9 +495,9 @@
 
 @media (max-width: 768px) {
   .contact-us {
-    transform: scale(0.1);
+    transform: scale(0.3);
     margin-top: -280%;
-    margin-bottom: -250%;
+    margin-bottom: -245%;
   }
 }
 </style>
