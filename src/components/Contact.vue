@@ -3,7 +3,7 @@
       <div class="div">
         <div class="form">
           <div class="banner">
-            <img class="img" src="@/assets/banner2.png" />
+            <img class="img" src="@/assets/img.png" />
             <div class="frame">
               <div class="text">
                 <p class="do-you-have-any">Do You Have Any Questions Or Want Some Clarification?</p>
@@ -116,15 +116,18 @@
     background-image: url(https://c.animaapp.com/28w77pOF/img/banner.png);
     background-size: cover;
     background-position: 50% 50%;
+    z-index: -1;
   }
 
 
 .img {
     position: absolute;
-    width: 245px;
-    height: 223px;
+    width: 200px;
+    height: 200px;
     top: 81px;
-    left: 46px;
+    left: -130px;
+    transform: scale(0.4);
+    z-index: 1;
   }
   
 .frame {
@@ -134,7 +137,7 @@
     gap: 40px;
     position: absolute;
     top: 354px;
-    left: 49px;
+    left: 2px;
   }
   
 .text {
