@@ -3,7 +3,7 @@
       <div class="div">
         <div class="form">
           <div class="banner">
-            <img class="img" src="@/assets/banner.png" />
+            <img class="img" src="@/assets/banner2.png" />
             <div class="frame">
               <div class="text">
                 <p class="do-you-have-any">Do You Have Any Questions Or Want Some Clarification?</p>
