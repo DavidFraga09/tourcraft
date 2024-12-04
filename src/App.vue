@@ -258,26 +258,97 @@ const navigateTo = (path) => {
   transform: scale(1.2);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-  .nav-links {
-    gap: 1rem;
+  /* Navegación */
+  .navigation {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
   }
 
-  .nav-link {
-    padding: 0.5rem;
-    font-size: 0.9rem;
+  .logo {
+    width: 200px; /* Ajusta el tamaño del logo */
   }
-  
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-link,
+  .button-link {
+    font-size: 16px;
+    padding: 12px 20px;
+    font-family: "Inter", Helvetica;
+  }
+
+  .nav-link:hover {
+    font-weight: bold;
+  }
+
+  .button-link {
+    background: none;
+    border: 2px solid #000000;
+    border-radius: 38px;
+    cursor: pointer;
+  }
+
+  /* Ajuste del contenido */
+  .content {
+    padding: 20px;
+    margin-top: 100px;
+  }
+
+  /* Pie de página */
   .footer-content {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Usamos 3 columnas, igual que en el diseño de escritorio */
+    gap: 2rem;
+    padding: 0 20px;
+  }
+
+  .footer-section ul {
+    margin-left: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .footer-logo {
+    margin: 0 auto;
+    width: 150px;
+  }
+
+  /* Ajuste de iconos sociales */
+  .social-icons a img {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
   }
 }
 
 @media (max-width: 480px) {
-  .nav-links {
-    flex-wrap: wrap;
+  .navigation {
+    display: flex;
+    flex-direction: column; /* Cambiar de fila a columna */
+    align-items: center; /* Centrar los elementos en el eje horizontal */
     justify-content: center;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 960px; /* Limitar el ancho máximo */
+    margin: 0 auto; /* Centrar horizontalmente */
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column; /* Alinear los elementos verticalmente */
+    align-items: center; /* Centrar los enlaces de navegación */
+    gap: 15px; /* Espacio entre los enlaces */
+    margin-top: 0;
+  }
+
+  .logo {
+    width: 180px; /* Ajusta el tamaño del logo */
+    margin-bottom: -50px;
   }
 
   .navigation {

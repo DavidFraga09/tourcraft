@@ -156,100 +156,6 @@ export default {
 
 
 <style scoped>
-/* General - Pantallas pequeñas (teléfonos móviles) */
-@media (max-width: 768px) {
-  .login {
-    flex-direction: column; /* Cambiar a disposición en columna */
-    align-items: center;
-    padding: 0; /* Ajustar espaciado */
-  }
-
-  .login .div {
-    width: 100%; /* Ocupa todo el ancho */
-    height: auto; /* Ajusta altura automáticamente */
-  }
-
-  .login .left {
-    width: 100%; /* Imagen ocupa todo el ancho */
-    height: auto; /* Ajusta la altura automáticamente */
-  }
-
-  .login .overlap-group {
-    width: 100%;
-    height: 300px; /* Ajusta altura para pantallas pequeñas */
-  }
-
-  .login .overlap-group::after {
-    height: 300px; /* Mantén la capa negra semitransparente sincronizada */
-  }
-
-  .login .explore-riviera-maya {
-    font-size: 24px; /* Texto más pequeño */
-    top: 20px;
-    left: 10px;
-    text-align: center; /* Centrar texto */
-    width: 100%; /* Ajustar ancho */
-  }
-
-  .login .text-wrapper-2, .login .p {
-    font-size: 14px;
-    width: 90%;
-    margin: auto;
-    text-align: center; /* Centra el texto */
-  }
-
-  /* Parte derecha debajo de la imagen */
-  .login .overlap {
-    width: 100%;
-    height: auto;
-    margin-top: 20px; /* Espaciado entre la imagen y la sección de formulario */
-    padding: 20px; /* Espaciado interno */
-  }
-
-  .login .group {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .login .input, .login .input-2 {
-    width: 100%; /* Formularios ocupan todo el ancho */
-  }
-
-  .login .button-primary {
-    width: 100%;
-    padding: 15px;
-    text-align: center;
-  }
-
-  .login .frame-wrapper, .login .button-with-centered {
-    width: 100%;
-  }
-}
-
-/* Más pequeño (teléfonos muy pequeños) */
-@media (max-width: 480px) {
-  .login .explore-riviera-maya {
-    font-size: 18px;
-    top: 10px;
-    left: 0;
-  }
-
-  .login .text-wrapper-2, .login .p {
-    font-size: 12px;
-    line-height: 18px;
-  }
-
-  .login .input-field, .login .input-field-2 {
-    padding: 12px;
-    font-size: 14px;
-  }
-
-  .login .button-primary {
-    font-size: 14px;
-    padding: 12px;
-  }
-}
-
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://fonts.googleapis.com/css?family=Commissioner:400,var(--paragraph-p3-semi-bold-font-weight),italic|Golos+Text:400,500,700,600|Inter:500,400,900,600");
 
@@ -290,7 +196,6 @@ a {
   width: 1600px;
   height: 693px;
   position: relative;
-
 }
 
 .login .left {
@@ -746,4 +651,108 @@ a {
   object-fit: cover;
   z-index: 20;
 }
+
+/* Media Query para pantallas pequeñas (425px o menos) */
+@media (max-width: 425px) {
+  .login .div {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en una columna */
+    width: 100%;
+    height: auto;
+  }
+
+  /* Sección izquierda */
+  .login .left {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: auto;
+    order: 1; /* Asegura que la sección izquierda esté primero */
+  }
+
+  .login .overlap-group {
+    width: 100%; /* Se ajusta a todo el ancho disponible */
+    height: 250px; /* Ajusta el tamaño de la imagen */
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Sección derecha */
+  .login .overlap {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-top: 20px; /* Espacio entre la imagen y el formulario */
+    order: 2; /* Coloca la sección derecha debajo de la izquierda */
+  }
+
+  .login .group {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: auto;
+    padding: 20px;
+  }
+
+  /* Campos de entrada */
+  .login .input, .login .input-2 {
+    width: 100%; /* Los campos de entrada ocuparán todo el ancho disponible */
+  }
+
+  .login .button-primary {
+    width: 100%; /* El botón ocupará todo el ancho */
+    padding: 10px 0; /* Ajuste el relleno para que el botón sea más pequeño */
+  }
+
+  /* Botones de redes sociales */
+  .login .button-with-centered, .login .frame-wrapper {
+    width: 100%; /* Los botones de redes sociales ocuparán todo el ancho */
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  .login .solano {
+    position: absolute;
+    width: 150px; /* Logo más pequeño */
+    height: auto;
+    top: 10px;
+    left: 50%; /* Centrado */
+    transform: translateX(-50%);
+  }
+}
+
+/* Media Query para pantallas medianas (768px o más) */
+@media (min-width: 768px) {
+  .login .div {
+    display: flex;
+    flex-direction: row; /* Coloca los elementos en una fila */
+    width: 1600px;
+    height: 693px;
+  }
+
+  .login .left {
+    width: 662px; /* Vuelve al tamaño original */
+  }
+
+  .login .overlap-group {
+    width: 660px; /* Vuelve al tamaño original */
+    height: 640px; /* Vuelve al tamaño original */
+  }
+
+  .login .overlap {
+    width: 753px; /* Vuelve al tamaño original */
+  }
+
+  .login .group {
+    width: 581px; /* Vuelve al tamaño original */
+  }
+
+  /* Vuelve al tamaño original de los campos */
+  .login .input, .login .input-2 {
+    width: 570px;
+  }
+
+  .login .button-primary {
+    width: 516px;
+  }
+
+  .login .button-with-centered, .login .frame-wrapper {
+    width: 275px;
+  }
+}
+
 </style>
